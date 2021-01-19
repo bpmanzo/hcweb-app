@@ -62,39 +62,39 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
+									<h1><span>HAPPY</span>CONES</h1>
+									<h2>Big Scoop Ice Cream Reseller</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<button type="button" class="btn btn-default get">Order now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{asset('images/home/girl1.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" />
+									<img src="{{asset('images/home/banner1.jpg')}}" class="girl img-responsive" alt="" />
+									<!-- <img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" /> -->
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>100% Responsive Design</h2>
+									<h1><span>HAPPY</span>CONES</h1>
+									<h2>Pay with Gcash</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<!-- <button type="button" class="btn btn-default get">Get it now</button> -->
 								</div>
 								<div class="col-sm-6">
-									<img src="{{asset('images/home/girl2.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{asset('images/home/pricing.png')}}"  class="pricing" alt="" />
+									<img src="{{asset('images/home/banner2.jpg')}}" class="girl img-responsive" alt="" />
+									<!-- <img src="{{asset('images/home/gcash-logo-square.png')}}"  class="pricing" alt="" /> -->
 								</div>
 							</div>
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free Ecommerce Template</h2>
+									<h1><span>HAPPY</span>CONES</h1>
+									<h2>Register now</h2>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
+									<button type="button" class="btn btn-default get">Sign up</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="{{asset('images/home/girl3.jpg')}}" class="girl img-responsive" alt="" />
-									<img src="{{asset('images/home/pricing.png')}}" class="pricing" alt="" />
+									<img src="{{asset('images/home/banner3.jpg')}}" class="girl img-responsive" alt="" />
+									<!-- <img src="{{asset('images/home/pricing.png')}}" class="pricing" alt="" /> -->
 								</div>
 							</div>
 							
@@ -224,9 +224,9 @@
 									<h4 class="panel-title"><a href="#">Shoes</a></h4>
 								</div>
 							</div>
-						</div><!--/category-products-->
-					
-						<div class="brands_products"><!--brands_products-->
+						</div><!--/category-->
+						<!--brands
+						<div class="brands_products">
 							<h2>Brands</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
@@ -239,19 +239,21 @@
 									<li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
 								</ul>
 							</div>
-						</div><!--/brands_products-->
-						
-						<div class="price-range"><!--price-range-->
+						</div> /brands-->
+
+						<!--price-range
+						<div class="price-range">
 							<h2>Price Range</h2>
 							<div class="well text-center">
 								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
 								 <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
 							</div>
-						</div><!--/price-range-->
+						</div>/price-range-->
 						
-						<div class="shipping text-center"><!--shipping-->
+						<!--shipping
+						<div class="shipping text-center">
 							<img src="{{asset('images/home/shipping.jpg')}}" alt="" />
-						</div><!--/shipping-->
+						</div>/shipping-->
 					
 					</div>
 				</div>
@@ -265,7 +267,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											{{Storage::disk('local')->url('product_images/'.$product->image)}}
+											{{$product->id}}
 											<img src="{{Storage::disk('local')->url('product_images/'.$product->image)}}" alt="" />
 											<h2>{{ $product->price}}</h2>
 											<p>{{ $product->name}}</p>
@@ -275,16 +277,16 @@
 											<div class="overlay-content">
 												<h2>{{ $product->price}}</h2>
 												<p>{{ $product->name}}</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+												<a href="{{route('AddToCartProduct',['id'=>$product->id])}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 										</div>
 								</div>
-								<div class="choose">
+								<!-- <div class="choose">
 									<ul class="nav nav-pills nav-justified">
 										<li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
 										<li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
 									</ul>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						@endforeach

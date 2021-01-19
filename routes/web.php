@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('products', ["uses"=>"ProductsController@index"]);
+
+Route::get('product/addToCart/{id}',['uses'=>'ProductsController@addProductToCart','as'=>'AddToCartProduct']);
