@@ -26,14 +26,15 @@
                         @guest
                             @if (Route::has('login'))
                                 <!-- <li class="nav-item"> -->
-                                    <a class = "b hover active awla" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a href ="{{ route('login') }}" ><button class = "btn btn-primary">{{ __('Login') }}</button></a>
                                 <!-- </li> -->
+                                <!-- class = "b hover active awla" -->
                              
                             @endif
                             
                             @if (Route::has('register'))
                                 <!-- <li class="nav-item"> -->
-                                    <a class= "b hover active awla" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a href = "{{ route('register') }}" ><button class = "btn btn-primary">{{ __('Register') }}</button></a>
                                 <!-- </li> -->
                             @endif
                         @else
