@@ -26,8 +26,26 @@ a:focus {
   outline:none;
   outline-offset: 0;
 }
-
+.b{
+    background-color: rgb(3, 20, 245);
+    box-shadow: 0 5px 0 darkred;
+    color: black;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .hover {
+    background-color:#1E90FF;
+  }
+  
+  .active {
+    box-shadow: none;
+    top: 5px;
+  }
 a {
+  
   -webkit-transition: 300ms;
   -moz-transition: 300ms;
     -o-transition: 300ms;
